@@ -1,0 +1,7 @@
+{
+  "recommendations": [
+    "astro-build.astro-vscode",
+    "lightyen.tailwindcss-intellisense-twin"
+  ],
+  "unwantedRecommendations": []
+}

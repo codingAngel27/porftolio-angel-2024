@@ -1,0 +1,157 @@
+---
+import CssIcon from "./icons/CssIcon.astro";
+import HtmlIcon from "./icons/HtmlIcon.astro";
+import Psd from "./icons/Psd.astro";
+import JsIcon from "./icons/JsIcon.astro";
+import IllustratorIcon from "./icons/IllustratorIcon.astro";
+import JavaIcon from "./icons/JavaIcon.astro";
+import MysqlIcon from "./icons/MysqlIcon.astro";
+import SqlIcon from "./icons/SqlIcon.astro";
+import ReactIcon from "./icons/ReactIcon.astro";
+import BootstrapIcon from "./icons/BootstrapIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
+import GitIcon from "./icons/GitIcon.astro";
+import GitHub from "./icons/GitHub.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import OfficeIcon from "./icons/OfficeIcon.astro";
+
+const ICONS = {
+    HTML: {
+        name: "HTML",
+        class: "",
+        icon: HtmlIcon,
+    },
+    CSS: {
+        name: "CSS",
+        class: "",
+        icon: CssIcon,
+    },
+    JS: {
+        name: "JavaScript",
+        class: "",
+        icon: JsIcon,
+    },
+    PSD: { name: "Photoshop", class: "", icon: Psd },
+    AI: { name: "Illustrator", class: "", icon: IllustratorIcon },
+    JAVA: { name: "Java", class: "", icon: JavaIcon },
+    MYSQL: {
+        name: "MySql",
+        class: "",
+        icon: MysqlIcon,
+    },
+    SQL: {
+        name: "SQL Server",
+        class: "",
+        icon: SqlIcon,
+    },
+    REACT: {
+        name: "ReactJS",
+        class: "",
+        icon: ReactIcon,
+    },
+    BOOTSTRAP: {
+        name: "Bootstrap",
+        class: "",
+        icon: BootstrapIcon,
+    },
+    TAILWIND: {
+        name: "Tailwind CSS",
+        class: "",
+        icon: TailwindIcon,
+    },
+    GIT: {
+        name: "Git",
+        class: "",
+        icon: GitIcon,
+    },
+    GITHUB: {
+        name: "GitHub",
+        class: "",
+        icon: GitHub,
+    },
+    ASTRO: {
+        name: "Astro",
+        class: "",
+        icon: AstroIcon,
+    },
+    OFFICE: {
+        name: "Office",
+        class: "",
+        icon: OfficeIcon,
+    },
+
+};
+
+const iconsArray = [
+    {
+        tags: [ICONS.PSD],
+    },
+    {
+        tags: [ICONS.AI],
+    },
+   
+    {
+        tags: [ICONS.HTML],
+    },
+    {
+        tags: [ICONS.CSS],
+    },
+    {
+        tags: [ICONS.JS],
+    },
+    {
+        tags: [ICONS.JAVA],
+    },
+    {
+        tags: [ICONS.MYSQL],
+    },
+    {
+        tags: [ICONS.SQL],
+    },
+    {
+        tags: [ICONS.REACT],
+    },
+    {
+        tags: [ICONS.ASTRO],
+    },
+    {
+        tags: [ICONS.OFFICE],
+    },
+    {
+        tags: [ICONS.BOOTSTRAP],
+    },
+    {
+        tags: [ICONS.TAILWIND],
+    },
+    {
+        tags: [ICONS.GIT],
+    },
+    {
+        tags: [ICONS.GITHUB],
+    },
+    
+    
+   
+];
+---
+
+<div
+    class="flex m-auto flex-wrap justify-center gap-x-10 items-center xl:w-[80%] lg:w-[1024px]"
+>
+    {
+        iconsArray.map(({ tags }) => (
+            <div class="flex my-4 flex-wrap items-center justify-centerrounded-br-lg bg-slate-900 py-2 px-2 transition-transform transform hover:scale-105 rounded shadow-xl shadow-white/10">
+                {tags.map((tag) => (
+                    <div class="flex flex-col items-center mb-2 flex-1 min-w-[100px]">
+                        <i
+                            class={`flex gap-x-2 rounded-full text-2xl ${tag.class}`}
+                        >
+                            <tag.icon class="size-16" />
+                        </i>
+                        <span class="mt-2 text-lg">{tag.name}</span>
+                    </div>
+                ))}
+            </div>
+        ))
+    }
+</div>

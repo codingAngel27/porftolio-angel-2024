@@ -1,0 +1,38 @@
+---
+
+
+import ExperienciaItem from "./ExperienciaItem.astro";
+const EXPERENCIE = [
+    {
+        date: "2024- Actualidad",
+        title: "Desarrollo Continuo con Java Spring Boot y Angular",
+        description:
+            "Como parte de mi búsqueda constante de mejora, me encuentro inmerso en el estudio y aplicación de Java Spring Boot en conjunto con Angular 17. Esta dedicación refleja mi compromiso con mantenerme actualizado en las últimas tecnologías y fortalecer mis habilidades en el desarrollo de aplicaciones robustas y modernas. Esta experiencia de aprendizaje continuo destaca mi enfoque proactivo para enfrentar nuevos desafíos y mi capacidad para adaptarme a las tecnologías emergentes en el desarrollo web.",
+        link: "/",
+    },
+    {
+        date: "Marzo 2023",
+        title: "Diseño y marketing digital",
+        description:
+            "Orquesté una campaña integral de diseño y marketing digital para una empresa, creando flyers, logos y banners. La coherencia visual que logré impulsó la identidad de la marca y generó una respuesta positiva del público, demostrando mi habilidad para fusionar creatividad y estrategia de manera impactante.",
+        link: "/",
+    },
+    {
+        date: "Septiembre 2023 - Proyecto",
+        title: "E-Commerce con React JS y Tailwind CSS",
+        description:
+            "Diseñé y desarrollé componentes interactivos en React JS, mejorando la experiencia del usuario. Integré Tailwind CSS para lograr un diseño responsivo y atractivo en diversas plataformas. Además, lideré la implementación de funcionalidades clave, como carrito de compras y gestión de productos, optimizando el rendimiento del sitio. Mi colaboración efectiva con el equipo garantizó la alineación exitosa entre los requisitos del cliente y las características técnicas.",
+        link: "/",
+    }
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 w-[70%] text-balance flex m-auto flex-wrap justify-center gap-x-10 items-center">
+    {
+        EXPERENCIE.map((experiencie) =>(
+            <li class="mb-10 ms-4">
+                <ExperienciaItem {...experiencie}/>
+                </li>
+        ))
+    }
+</ol>

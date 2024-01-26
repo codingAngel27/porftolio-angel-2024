@@ -1,0 +1,95 @@
+---
+import Header from "../components/Header.astro";
+import "@fontsource-variable/onest";
+
+interface Props {
+	title: string;
+	description: string;
+}
+
+const { description, title} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-950 relative text-black dark:text-white mx-auto">
+		<Header />
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+	html {
+		font-family: "Onest Variable", system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+	a {
+  text-decoration: none;
+}
+
+.button-wrapper {
+ text-align: center;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+  width: 280px;
+}
+
+.button-wrapper__text {
+  position: relative;
+  line-height: 2rem;
+  color: white;
+  top: -48px;
+}
+
+.button-wrapper__shape {
+  stroke-width: 2px;
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+  fill: transparent;
+  stroke: #16FF00;
+  border-bottom: 5px solid black;
+  transition: stroke-width 700ms, stroke-dashoffset 700ms, stroke-dasharray 700ms;
+}
+
+.button-wrapper:hover .button-wrapper__shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -414;
+  stroke-width: 8px;
+}
+
+.console-container {
+ text-align:center;
+ display:block;
+ position:absolute;
+ color:white;
+ margin:auto;
+}
+.console-underscore {
+ display: inline-block;
+ position: relative;
+ top:-0.14em;
+}
+</style>

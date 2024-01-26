@@ -1,0 +1,164 @@
+---
+import Button from "./Button.astro";
+import TelefonoIcon from "./icons/TelefonoIcon.astro";
+import UbicacionIcon from "./icons/UbicacionIcon.astro";
+import RelojIcon from "./icons/RelojIcon.astro";
+import ButonIcon from "./icons/ButonIcon.astro";
+interface Iinfo {
+    title: string;
+    description: string;
+    location: string;
+    telefono: string;
+    horario: string;
+}
+
+const info: Iinfo = {
+    title: "Contactame",
+    description:
+        "¡Estoy emocionado de conocer nuevos retos y colaborar en proyectos interesantes! No dudes en ponerte en contacto conmigo.",
+    location: "Lima - Perú",
+    telefono: "+51 992 403 813",
+    horario: "24/7",
+};
+---
+
+<section class="max-w-screen-lg mx-auto p-5 bg-gradient-to-r  flex flex-wrap">
+    <div
+        class="grid grid-cols-1 md:grid-cols-12 rounded shadow-2xl shadow-white/10"
+    >
+        <div class="bg-gray-800/20 md:col-span-4 p-10 text-white">
+            <p class="mt-4 text-sm leading-7 font-regular uppercase">
+            </p>
+            <h3
+                class="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight"
+            >
+                Estare encantado de <span class="text-indigo-400">responder</span>
+            </h3>
+            <p class="mt-4 leading-7 text-gray-200">
+                {info.description}
+            </p>
+
+            <div class="flex items-center mt-5">
+                <UbicacionIcon class="size-5 mr-2 text-[#fff]" />
+                <span class="text-sm">{info.location}</span>
+            </div>
+            <div class="flex items-center mt-5">
+                <TelefonoIcon class="size-5 mr-2 text-[#fff]" />
+                <span class="text-sm">{info.telefono}</span>
+            </div>
+            <div class="flex items-center mt-5">
+                <RelojIcon class="size-5 mr-2 text-[#fff]" />
+                <span class="text-sm">{info.horario}</span>
+            </div>
+        </div>
+        <form
+            action="https://formspree.io/f/mayrqwlo"
+            method="POST"
+            class="md:col-span-8 p-10 group"
+            novalidate
+        >
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                    <label
+                        class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+                        for="name"
+                    >
+                        Nombre
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-black border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 peer"
+                        id="name"
+                        type="text"
+                        name="name"
+                        placeholder="nombre"
+                        required
+                        pattern="^[a-zA-ZÀ-ÿ ']{1,40}$"
+                    />
+                    <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                        Indroduce correctamente los nombres
+                      </span>
+                    
+                </div>
+                <div class="w-full md:w-1/2 px-3">
+                    <label
+                        class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+                        for="lastName"
+                    >
+                        Apellidos
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4  leading-tight focus:outline-none focus:bg-white focus:border-gray-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 peer"
+                        id="lastName"
+                        type="text"
+                        name="lastName"
+                        placeholder="apellidos"
+                        required
+                        pattern="^[a-zA-ZÀ-ÿ ']{1,40}$"
+                    />
+                    <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                        Indroduce correctamente los apellidos
+                      </span>
+                </div>
+            </div>
+            <div class="flex flex-wrap -mx-3 mb-6 peer">
+                <div class="w-full px-3">
+                    <label
+                        class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+                        for="email"
+                    >
+                        Email
+                    </label>
+                    <input
+                        class="appearance-none block w-full bg-gray-200 text-black border-2 border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 invalid:[&:not(:placeholder-shown):not(:focus)]:border-red-500 peer"
+                        id="email"
+                        type="email"
+                        name="email"
+                        placeholder="correo@correo.com"
+                        required
+                        pattern="/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/"
+                    />
+                    <span class="mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                        Por favor, introduce una dirección de correo electrónico válida
+                      </span>
+
+                </div>
+            </div>
+
+            <div class="flex flex-wrap -mx-3 mb-6">
+                <div class="w-full px-3">
+                    <label
+                        class="block uppercase tracking-wide text-white text-xs font-bold mb-2"
+                        for="message"
+                    >
+                        Mensaje
+                    </label>
+                    <textarea
+                        rows="10"
+                        name="message"
+                        id="message"
+                        class="resize-none text-pretty appearance-none block w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                        required
+                    ></textarea>
+                </div>
+                <div class="flex justify-between w-full px-3">
+                    <div class="md:flex md:items-center">
+                        <label class="block text-gray-500 font-bold">
+                            <input class="mr-2 leading-tight" type="checkbox" required />
+                            <span class="text-sm text-white">
+                                ¡Envíame tu mensaje!
+                            </span>
+                        </label>
+                    </div>
+                    <Button variant={"primary"} className={"min-w-max text-white group-invalid:pointer-events-none group-invalid:opacity-30"} id={"submitBtn"}>
+                        <span class="hidden sm:flex relative z-[5] text-white">
+                            Contactar
+                        </span>
+                        <span class="flex sm:hidden relative z-[5]">
+                           <ButonIcon />
+                        </span>
+                    </Button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
