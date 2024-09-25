@@ -20,7 +20,7 @@ const { description, title} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body class="bg-slate-950 relative text-black dark:text-white mx-auto">
+	<body class="h-14 bg-gradient-to-r bg-[#EEEEEE] dark:from-customPurple dark:to-customPurple2">
 		<Header />
 		<slot />
 	</body>
@@ -60,7 +60,6 @@ const { description, title} = Astro.props;
 .button-wrapper__text {
   position: relative;
   line-height: 2rem;
-  color: white;
   top: -48px;
 }
 
@@ -84,7 +83,6 @@ const { description, title} = Astro.props;
  text-align:center;
  display:block;
  position:absolute;
- color:white;
  margin:auto;
 }
 .console-underscore {

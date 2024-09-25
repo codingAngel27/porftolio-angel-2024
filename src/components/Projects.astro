@@ -6,31 +6,34 @@ import JavaIcon from "./icons/JavaIcon.astro";
 import SqlIcon from "./icons/SqlIcon.astro";
 import MysqlIcon from "./icons/MysqlIcon.astro";
 import BootstrapIcon from "./icons/BootstrapIcon.astro";
+import NetIcon from "./icons/NetIcon.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import TailwindIcon from "./icons/TailwindIcon.astro";
 
 const TAGS = {
     HTML: {
         name: "HTML",
-        class: "bg-[#fff]/10 text-[#fff]",
+        class: "bg-cyan-800/10 text-[#fff]",
         icon: HtmlIcon,
     },
     CSS: {
         name: "CSS",
-        class: "bg-[#fff]/10 text-[#fff]",
+        class: "bg-cyan-800/10 text-[#fff]",
         icon: CssIcon,
     },
     JS: {
         name: "Javascript",
-        class: "bg-[#fff]/10 text-[#fff]",
+        class: "bg-cyan-800/10 text-[#fff]",
         icon: JsIcon,
     },
     JAVA: {
         name: "Java",
-        class: "bg-[#fff]/10 text-[#fff]",
+        class: "bg-cyan-800/10 text-[#fff]",
         icon: JavaIcon,
     },
     SQL: {
         name: "SQL Server",
-        class: "bg-[#fff]/10 text-[#fff]",
+        class: "bg-cyan-800/10 text-[#fff]",
         icon: SqlIcon,
     },
     MYSQL:{
@@ -40,18 +43,50 @@ const TAGS = {
     },
     BOOTSTRAP:{
         name: "Bootstrap",
-        class: "bg-[#fff]/10 text-[#fff]",
+        class: "bg-cyan-800/10 text-[#fff]",
         icon: BootstrapIcon,
+    },
+    Net:{
+        name: ".Net",
+        class: "bg-cyan-800/10 text-[#fff]",
+        icon: NetIcon,
+    },
+    Astro:{
+        name: "Astro",
+        class: "bg-cyan-800/10 text-[#fff]",
+        icon: AstroIcon,
+    },
+    Tailwind:{
+        name: "Tailwind CSS",
+        class: "bg-cyan-800/10 text-[#fff]",
+        icon: TailwindIcon,
     },
 };
 
 const PROJECTS = [
+{
+        title: "Farma Stock",
+        description:
+            "El objetivo principal del sistema es optimizar la eficiencia en la administración de las relaciones con proveedores, clientes y productos, automatizando procesos clave, integrando los datos en una plataforma unificada y mejorando la precisión en los informes de ventas y stock de medicamentos.",
+        github: "https://github.com/codingAngel27/sistema-farmastock",
+        image: "/projects/farmastockweb.png",
+        tags: [TAGS.Net, TAGS.SQL, TAGS.BOOTSTRAP],
+    },
     {
-        title: "Matricula Web",
+        title: "Preciso Group",
+        description:
+            "Este proyecto es una página web desarrollada para Preciso Group, una empresa de servicios eléctricos. Utilicé Astro como framework para crear una experiencia web rápida y optimizada, implementando JavaScript para la funcionalidad interactiva y Tailwind CSS para un diseño moderno, responsivo y atractivo.",
+        link: "#",
+        github: "https://github.com/codingAngel27/preciso-group",
+        image: "/projects/preciso-group.png",
+        tags: [TAGS.Astro, TAGS.Tailwind],
+    },
+    {
+        title: "Sistema de Matricula",
         description:
             "La implementación de un sistema de matrícula en línea ofrece numerosas ventajas que respaldan su justificación en instituciones educativas. ",
         link: "#",
-        github: "#",
+        github: "https://github.com/codingAngel27/sistema-matricula",
         image: "/projects/matriculaAlumnos.png",
         tags: [TAGS.JAVA, TAGS.MYSQL, TAGS.JS, TAGS.BOOTSTRAP],
     },
@@ -60,7 +95,7 @@ const PROJECTS = [
         description:
             "El presente proyecto consiste en la creación de una página web para la venta de ropa infantil de la tienda “Bebitus” a través de internet. Se basa en la necesidad de una pequeña tienda de ropa en poder mostrar sus productos en internet, hacer conocida la marca y así incrementar sus ventas anuales",
         link: "#",
-        github: "https://github.com/Ruben-AngelDev",
+        github: "https://github.com/codingAngel27/project-bebitus",
         image: "/projects/img-bebitus.png",
         tags: [TAGS.HTML, TAGS.CSS, TAGS.JS, TAGS.BOOTSTRAP],
     },
@@ -68,10 +103,11 @@ const PROJECTS = [
         title: "Sistema de Ventas-Farmacia",
         description:
             "La implementación de un sistema de registros el cual registrará las ventas a diario por cliente, así como sus registros como cliente del establecimiento y un detalle de boletas el cual será almacenado y guardado en una Base de datos local. Este sistema ofrece numerosas ventajas que respaldan su justificación en farmacéuticas como “La Remediosa”.",
-        github: "#",
+        github: "https://github.com/codingAngel27/farmacia-destok",
         image: "/projects/registroDatos.png",
         tags: [TAGS.JAVA, TAGS.SQL],
     },
+    
 ];
 ---
 <div class="flex flex-wrap justify-center gap-x-10"> 
@@ -80,7 +116,7 @@ const PROJECTS = [
     <article class="max-w-sm rounded overflow-hidden mx-2 my-4 h-[150] flex flex-col justify-between shadow-2xl shadow-white/10">
     <img class="w-full hover:scale-105" src={image} alt="Proyectos AngelDev">
     <div class="px-6 py-4 mb-auto">
-      <h3 class="text-[#fff] font-bold text-xl mb-2">{title}</h3>
+      <h3 class="text-[#9CAFAA] dark:text-[#fff] font-bold text-xl mb-2">{title}</h3>
       <p class="text-[#B6BBC4] text-base text-balance line-clamp-5 max-lg:hidden">
         {description}
       </p>
