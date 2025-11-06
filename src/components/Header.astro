@@ -24,7 +24,7 @@
 		<nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto ">
 			<div class="flex items-center mb-8">
 				<a class="mr-auto text-3xl font-bold leading-none" href="#">
-	              <h1 class="text-cyan-700">AngelDev</h1>
+	              <h1 class="text-cyan-700">Ruben Ocaña</h1>
 				</a>
 				<button class="navbar-close">
 					<svg class="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -53,51 +53,50 @@
 			</div>
 			<div class="mt-auto">
 				<p class="my-4 text-xs text-center text-gray-400">
-					<span>Copyright © 2024</span>
+					<span>Copyright © 2025</span>
 				</p>
 			</div>
 		</nav>
 	</div>
 </header>
 <script>
-// Burger menus
 document.addEventListener('DOMContentLoaded', function() {
     // open
     const burger = document.querySelectorAll('.navbar-burger');
     const menu = document.querySelectorAll('.navbar-menu');
 
     if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-            burger[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
+        burger.forEach((b) => {
+            b.addEventListener('click', () => {
+                menu.forEach((m) => m.classList.toggle('hidden'));
             });
-        }
+        });
     }
 
     // close
     const close = document.querySelectorAll('.navbar-close');
     const backdrop = document.querySelectorAll('.navbar-backdrop');
 
+    const closeMenu = () => {
+        menu.forEach((m) => m.classList.add('hidden'));
+    };
+
     if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-            close[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
-            });
-        }
+        close.forEach((c) => c.addEventListener('click', closeMenu));
     }
 
     if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-            backdrop[i].addEventListener('click', function() {
-                for (var j = 0; j < menu.length; j++) {
-                    menu[j].classList.toggle('hidden');
-                }
+        backdrop.forEach((b) => b.addEventListener('click', closeMenu));
+    }
+
+    // 🆕 Cerrar menú al hacer clic en los enlaces del menú
+    const menuLinks = document.querySelectorAll('.navbar-menu a');
+    if (menuLinks.length) {
+        menuLinks.forEach((link) => {
+            link.addEventListener('click', () => {
+                closeMenu();
             });
-        }
+        });
     }
 });
 </script>
