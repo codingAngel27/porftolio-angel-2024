@@ -1,45 +1,45 @@
 ---
-
-
 import ExperienciaItem from "./ExperienciaItem.astro";
-const EXPERENCIE = [
+const EXPERIENCE = [
     {
-        date: "2024 - Actualidad",
-        title: "Desarrollo Continuo con Java Spring Boot y Angular",
+        date: "Ene 2025 – Sep 2025",
+        title: "Desarrollador Jr - Nextcode S.A.C.",
         description:
-            "Como parte de mi búsqueda constante de mejora, me encuentro inmerso en el estudio y aplicación de Java Spring Boot en conjunto con Angular 17. Esta dedicación refleja mi compromiso con mantenerme actualizado en las últimas tecnologías y fortalecer mis habilidades en el desarrollo de aplicaciones robustas y modernas. Esta experiencia de aprendizaje continuo destaca mi enfoque proactivo para enfrentar nuevos desafíos y mi capacidad para adaptarme a las tecnologías emergentes en el desarrollo web.",
+            "Implementación y soporte de Bitrix24 CRM, automatizando procesos de ventas y atención al cliente. Implemente un chatbot con NestJS integrando microservicios para conexión con sistemas externos (ERP, CRM) y generación de resúmenes inteligentes de Deals mediante IA (OpenAI y n8n). Los resúmenes automáticos se mostraban en los comentarios del Deal, funcionando como asistente inteligente para ventas. Logro: mejora del 50% en los tiempos de respuesta y reducción significativa de tareas manuales.",
         link: "/",
     },
     {
-        date: "2024 - Agosto",
-        title: "Sistema de gestion Farmaceutica",
+        date: "Ago 2024 – Ene 2025",
+        title: "Auxiliar de TI - Intratek Perú E.I.R.L.",
         description:
-            "Desarrollé un sistema de gestión para farmacia utilizando .NET con SQL Server y aplicando el patrón MVC. Implementé funciones clave como la gestión de inventarios, ventas y administración de clientes y proveedores, utilizando Bootstrap y JavaScript para una interfaz moderna y responsiva. Apliqué patrones de diseño como Repository y Dependency Injection para mejorar la escalabilidad y mantenibilidad del sistema, asegurando un rendimiento eficiente mediante el uso de procedimientos almacenados en SQL Server.",
+            "Desarrollo completo de un sistema ERP con Java Spring Boot y MySQL, abarcando módulos de clientes, inventario, cotización, ventas y facturación. Implementé el frontend con React, diseñando interfaces dinámicas y responsivas. Además, desarrollé APIs REST, autenticación con Spring Security y JWT, y dashboards analíticos. Logro: reducción del 40% de tareas manuales mediante automatización y una interfaz intuitiva.",
         link: "/",
     },
     {
-        date: "Marzo 2023",
-        title: "Diseño y marketing digital",
+        date: "2024 - Proyecto Personal destacado",
+        title: "E-Commerce de Productos Artesanales con Spring Boot y Thymeleaf",
         description:
-            "Orquesté una campaña integral de diseño y marketing digital para una empresa, creando flyers, logos y banners. La coherencia visual que logré impulsó la identidad de la marca y generó una respuesta positiva del público, demostrando mi habilidad para fusionar creatividad y estrategia de manera impactante.",
+            "Desarrollé un sistema de comercio electrónico enfocado en productos artesanales, implementando un backend robusto en Java Spring Boot con el patrón MVC y un frontend dinámico basado en Thymeleaf. El sistema utiliza Spring Security para la autenticación y autorización de usuarios, asegurando una gestión segura de sesiones y roles. Los controladores manejan las solicitudes del frontend, garantizando una comunicación eficiente entre capas. El proyecto incluye módulos para gestión de productos, carrito de compras, autenticación de usuarios y panel administrativo, destacando por su diseño responsivo, arquitectura limpia y buenas prácticas de desarrollo fullstack.",
         link: "/",
     },
     {
-        date: "Septiembre 2023 - Proyecto",
-        title: "E-Commerce con React JS y Tailwind CSS",
+        date: "2023 - Proyecto Personal destacado",
+        title: "E-Commerce con React JS y TailwindCSS",
         description:
-            "Diseñé y desarrollé componentes interactivos en React JS, mejorando la experiencia del usuario. Integré Tailwind CSS para lograr un diseño responsivo y atractivo en diversas plataformas. Además, lideré la implementación de funcionalidades clave, como carrito de compras y gestión de productos, optimizando el rendimiento del sitio. Mi colaboración efectiva con el equipo garantizó la alineación exitosa entre los requisitos del cliente y las características técnicas.",
+            "Diseñé y desarrollé componentes interactivos en React JS para mejorar la experiencia del usuario. Integré TailwindCSS para lograr un diseño responsivo y atractivo. Implementé funcionalidades clave como carrito de compras y gestión de productos, optimizando el rendimiento del sitio y asegurando una alineación efectiva entre requisitos y desarrollo técnico.",
         link: "/",
-    }
+    },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 w-[70%] text-balance flex m-auto flex-wrap justify-center gap-x-10 items-center">
+<ol
+    class="relative border-s border-gray-200 dark:border-gray-700 w-[70%] text-balance flex m-auto flex-wrap justify-center gap-x-10 items-center"
+>
     {
-        EXPERENCIE.map((experiencie) =>(
+        EXPERIENCE.map((experiencie) => (
             <li class="mb-10 ms-4">
-                <ExperienciaItem {...experiencie}/>
-                </li>
+                <ExperienciaItem {...experiencie} />
+            </li>
         ))
     }
 </ol>

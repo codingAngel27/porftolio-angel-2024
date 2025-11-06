@@ -22,6 +22,9 @@ import NpmIcon from "./icons/NpmIcon.astro";
 import NodeIcon from "./icons/NodeIcon.astro";
 import MongDbIcon from "./icons/MongDbIcon.astro";
 import FigmaIcon from "./icons/FigmaIcon.astro";
+import NestjsIcon from "./icons/NestjsIcon.astro";
+import DockerIcon from "./icons/DockerIcon.astro";
+import HomebrewIcon from "./icons/HomebrewIcon.astro";
 
 const ICONS = {
     HTML: {
@@ -127,6 +130,21 @@ const ICONS = {
         class: "",
         icon: FigmaIcon,
     },
+    NESTJS: {
+        name: "NestJS",
+        class: "",
+        icon: NestjsIcon,
+    },
+    DOCKER: {
+        name: "Docker",
+        class: "",
+        icon: DockerIcon,
+    },
+    HOMEBREW: {
+        name: "Homebrew",
+        class: "",
+        icon: HomebrewIcon,
+    },
 };
 
 const iconsArray = [
@@ -147,6 +165,9 @@ const iconsArray = [
         tags: [ICONS.NPM],
     },
     {
+        tags: [ICONS.HOMEBREW],
+    },
+    {
         tags: [ICONS.NODE],
     },
     {
@@ -160,6 +181,8 @@ const iconsArray = [
     },
     {
         tags: [ICONS.JAVA],
+    },
+    { tags: [ICONS.NESTJS],
     },
     {
         tags: [ICONS.SPRING],
@@ -189,6 +212,9 @@ const iconsArray = [
         tags: [ICONS.POSTMAN],
     },
     {
+        tags: [ICONS.DOCKER],
+    },
+    {
         tags: [ICONS.FIGMA],
     },
     {
@@ -201,6 +227,7 @@ const iconsArray = [
     {
         tags: [ICONS.OFFICE],
     },
+    
 ];
 ---
 
